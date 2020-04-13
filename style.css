@@ -1,0 +1,57 @@
+/* Luc Humblot    |   klas: 4A8B */
+main {
+    height: 500px;
+    width: 500px;
+}
+
+div {
+    display: inline-block;
+    width: 33%;
+    height: 33%;
+}
+
+div.color {
+    width: 50%;
+    transition: width 2s;
+}
+
+
+.changeColor {
+    position: relative;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+
+@keyframes animation {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
