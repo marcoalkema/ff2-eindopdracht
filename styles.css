@@ -1,15 +1,40 @@
 main {
-  height: 500px;
-  width: 500px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  transition: transform 4s;
 }
-
 div {
-  display: inline-block;
-  width: 33%;
-  height: 33%;
+ 
+  height: 200px;
+  transition: all 2s ease-in-out;
+}
+main.active{
+  gap: 10px;
+}
+main.rotate{
+  transform: rotate(90deg) translate(30%,0);
+}
+.i2.active {
+  background-color: blue !important;
+}
+.i1{
+  clip-path: circle(100%);
+}
+.i1.active{
+  clip-path: circle(20px at 50% 50%);
+
+}
+.i3:hover{
+  transform: scale(1.2);
+
 }
 
-div.color {
-  width: 50%;
-  transition: width 2s;
+.i4.active{
+  animation: rotate 2s  infinite ease-in-out;
+
+}
+@keyframes rotate{
+  0% {transform: rotate(0) scale(1)}
+  50% {transform: rotate(180deg) scale(.5)}
+  100% {transform: rotate(360deg) scale(1)}
 }
