@@ -2,6 +2,8 @@ main {
   display: grid;
   grid-template-columns: 200px 200px 200px;
   transition: transform 4s;
+  transition: all 1s;
+  gap: 0;
 }
 div {
  
